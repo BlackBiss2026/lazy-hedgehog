@@ -1,11 +1,11 @@
-# id | display name | points | command
-build          | Build (compiles)                          | 5  | make -s build/hedgehog
-no_warnings    | No compiler warnings (-Werror)            | 5  | make -s werror
-tiny           | 1x1 world and a single row                | 10 | make -s build/hedgehog && tests/run_tests.sh 01_one_cell 02_one_row
-small          | Small 3x3 world                           | 10 | make -s build/hedgehog && tests/run_tests.sh 03_small
-detour         | Path that must go up and left             | 15 | make -s build/hedgehog && tests/run_tests.sh 04_needs_detour
-all_zero       | All weights zero                          | 5  | make -s build/hedgehog && tests/run_tests.sh 05_all_zero
-random_100     | Random 100x100 world (under 10 s)         | 15 | make -s build/hedgehog && tests/run_tests.sh 06_random_100
-maze_100       | 100x100 maze (under 10 s)                 | 15 | make -s build/hedgehog && tests/run_tests.sh 07_maze_100
-errors         | Errors: bad arguments / bad world files   | 10 | make -s build/hedgehog && tests/run_tests.sh errors
-memory         | Memory: no leaks / invalid access (ASan)  | 10 | make -s build/hedgehog_asan && tests/run_tests.sh --asan 01_one_cell 03_small 04_needs_detour 06_random_100 errors
+# id | check name | command
+build          | Build (compiles)                          | make -s build/hedgehog
+no_warnings    | No compiler warnings (-Werror)            | make -s werror
+tiny           | 1x1 world and a single row                | make -s build/hedgehog && tests/run_tests.sh 01_one_cell 02_one_row
+small          | Small 3x3 world                           | make -s build/hedgehog && tests/run_tests.sh 03_small
+detour         | Path that must go up and left             | make -s build/hedgehog && tests/run_tests.sh 04_needs_detour
+all_zero       | All weights zero                          | make -s build/hedgehog && tests/run_tests.sh 05_all_zero
+random_100     | Random 100x100 world (under 10 s)         | make -s build/hedgehog && tests/run_tests.sh 06_random_100
+maze_100       | 100x100 maze (under 10 s)                 | make -s build/hedgehog && tests/run_tests.sh 07_maze_100
+errors         | Errors: bad arguments / bad world files   | make -s build/hedgehog && tests/run_tests.sh errors
+memory         | Memory: no leaks / invalid access (ASan)  | make -s build/hedgehog_asan && tests/run_tests.sh --asan 01_one_cell 03_small 04_needs_detour 06_random_100 errors
