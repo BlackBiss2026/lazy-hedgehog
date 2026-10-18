@@ -90,7 +90,7 @@ tests/run_tests.sh 04_needs_detour   # בדיקה אחת
 2. בראש העמוד הזה לחצו על הכפתור הירוק **Use this template** ← **Create a new repository**.
 3. מלאו:
    - **Owner:** `BlackBiss2026` (לא החשבון הפרטי שלכם!)
-   - **Repository name:** `lazy-hedgehog-<שם המשתמש שלכם בגיטהאב>`, למשל `lazy-hedgehog-dana-cohen`
+   - **Repository name:** כל שם שתרצו, למשל `lazy-hedgehog`
    - **Private**
 4. `git clone` למאגר החדש, ועובדים בו.
 
